@@ -20,7 +20,7 @@ func smtpSendMail(toAddress string, toName string, contentType string, subject s
 	if toName == "" {
 		headers["To"] = to.String()
 	} else {
-		headers["To"] = toName + " <" + to.String() + ">"
+		headers["To"] = toName + " " + to.String() + ""
 	}
 	if contentType == "" {
 		headers["Content-Type"] = "text/plain; charset=UTF-8"
